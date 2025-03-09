@@ -1,0 +1,44 @@
+Hi every body, I am glad to have this opportunity to speak about my recent work for you.
+
+To start let me draw your attention to brief history about the problem. 
+In 1979 Frankl propose an interesting conjecture about finite Union closed families. He claimed that for all such families there exist a member that belongs to at least half of the families.
+It seems as an obvious question but after 4 decade it still remain an open problem.
+And here some example of such families and desire element. 
+
+In this work I we not focus on the main problem but try to make our underacting about
+the Union Closed families deeper. Specifically we proved that the core structure of such families completely preserved through isomorphism. 
+
+Here you can see definition of isomorphism and some example.
+
+One day we I was dealing we the problem I through "if I have a Union-closed family" and know it 
+has a member that belongs to at least half of the family as Frankl proposed what can we say about
+another Union-closed family that is isomorphic to that? Can we conclude it has a member with that property? Or even more rough question if a member belongs to for example 11 member of the family 
+is there a member that belongs to 10 member of the family of its isomorphic family? 
+
+When first you start write some example to experience the question you will find out very soon.
+It is not true. At least for the rougher question is not true. here is some example that shows us 
+it can't be always true. 
+
+But with a closer look we can see our isomorphism preserve the structure completely. you can see 
+if we draw Hasse diagram of two Union-closed family the lattice structure completely preserve.
+
+And this the point the next question will raise. 
+What about the member that actually help the family to shape? The ones the play main role for the family? 
+
+To use this prespective first we should distinguish main player over imposters. To formalize these concept we define redundant elements. Element that removing them doesn't  effect the structure.
+
+Here you can see formal definition of redundant element. 
+And not only structure won't effect by removing them even isomorphism still holds. after purification. 
+
+So the next obvious question is what if we remove all such element or what if we dealing with 
+families without redundant element which call pure Union-closed families. 
+
+And it reveals our rough question correct for such families that is our main theorem. 
+Even if our families are not pure we can purify them without effecting on the isomorphism between them.
+
+To prove our main theorem we highly relay on Cardinality theorem which also prove as part of work.
+You can see the exact formulation of Cardinality theorem.
+
+When I start this paper I didn't expect all the structure will be preserve so I think it is nice to bring my primary version of the theorem which just try to prove that number of all member preserve by isomorphism and then I refine the prove for the general version which the cardinality theorem I just mention and then it helps me to answer my primary question. with the main result of this work. 
+
+Thank you for you attention and if there any question I am here to answer now or later if contact me.
