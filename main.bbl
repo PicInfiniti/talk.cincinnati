@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+
+\bibitem{frankl1995}
+P.~Frankl.
+\newblock Extremal set systems.
+\newblock In {\em Handbook of Combinatorics}, volume~2, pages 1293--1329. 1995.
+
+\bibitem{moghaddasmehr2023}
+M.~J.~Moghaddas Mehr.
+\newblock A note on the union-closed sets conjecture.
+\newblock arXiv, 2023.
+\newblock \href {http://arxiv.org/abs/2309.01704} {\path{arXiv:2309.01704}},
+  \href {https://doi.org/10.48550/arXiv.2309.01704}
+  {\path{doi:10.48550/arXiv.2309.01704}}.
+
+\end{thebibliography}

@@ -1,0 +1,78 @@
+\documentclass{beamer}
+% Theme choice
+\usetheme{metropolis} % Modern and clean layout
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx, fancyhdr}
+
+% Footer settings
+\setbeamertemplate{footline}{
+    \leavevmode\hbox{\begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{author in head/foot}%
+    \hspace{1em} \insertshorttitle \, \textbullet \, \insertsection \, \hfill \insertframenumber{}/\inserttotalframenumber{}
+    \end{beamercolorbox}}
+}
+
+% Title Page Details
+\title{Isomorphism in Union-Closed Sets}
+\author{Mohammad Javad Moghaddas Mehr}
+\date{ORAM 14, March 29-30, 2025}
+
+\begin{document}
+
+% Title Slide
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Outline Slide
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+% Introduction Slide
+\section{Introduction}
+\begin{frame}{Introduction}
+    \begin{itemize}
+        \item Definition of Union-Closed Families of Sets
+        \item Péter Frankl's Union-Closed Set Conjecture
+        \item Our Focus: Structural Properties of Isomorphisms
+    \end{itemize}
+\end{frame}
+
+% Definitions Slide
+\section{Definitions and Theorems}
+\begin{frame}{Definitions}
+    \textbf{Union-Closed Family:} A collection $\mathcal{K} \subseteq 2^{[n]}$ is union-closed if for all $A, B \in \mathcal{K}$, we have $A \cup B \in \mathcal{K}$.
+
+    \vspace{1em}
+    \textbf{Isomorphism:} A bijection $h: \mathcal{K}_1 \to \mathcal{K}_2$ such that:
+    \begin{equation*}
+        h(A \cup B) = h(A) \cup h(B) \quad \forall A, B \in \mathcal{K}_1.
+    \end{equation*}
+\end{frame}
+
+% Main Theorem Slide
+\begin{frame}{Main Theorem}
+    \textbf{Theorem:} For every isomorphism $h: \mathcal{K}_1 \to \mathcal{K}_2$, there exists a corresponding hyperisomorphism $H: \bigcup \mathcal{K}_1 \to \bigcup \mathcal{K}_2$ such that:
+    \begin{equation*}
+        h(A) = \{H(a) \mid a \in A\}, \quad \forall A \in \mathcal{K}_1.
+    \end{equation*}
+\end{frame}
+
+% Conclusion Slide
+\section{Conclusion}
+\begin{frame}{Conclusion}
+    \begin{itemize}
+        \item Structural preservation under isomorphisms
+        \item Connection to the Union-Closed Set Conjecture
+        \item Future work: applications of hyperisomorphisms
+    \end{itemize}
+\end{frame}
+
+% Thank You Slide
+\begin{frame}
+    \centering
+    {\Huge \textbf{Thank You!}}
+    \\ Questions?
+\end{frame}
+
+\end{document}
