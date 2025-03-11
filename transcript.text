@@ -27,10 +27,10 @@ One day, while thinking about the problem, I asked myself:
 In other words:
 
 If one family has an element appearing in at least half the sets, does its isomorphic counterpart also have such an element?
-More generally, if an element appears in 11 sets in one family, must there be an element appearing in 10 sets in its isomorphic version?
-At first, I expected the answer to be yes. But when I started testing examples, I quickly realized:
+More generally, if an element appears in 11 sets in one family, must there be an element appearing in 11 sets in its isomorphic version?
+When I started testing examples, I quickly realized:
 
-🚫 It’s not always true!
+🚫 It’s not always true! Even In simple cases.
 
 Here are some counterexamples showing that isomorphic families don’t necessarily preserve frequency counts in this way.
 

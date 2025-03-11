@@ -7,19 +7,31 @@ In 1979, Frankl proposed an interesting conjecture about finite union-closed fam
 
 Here are some examples of union-closed families and the elements that satisfy this conjecture.
 
-In this work I we not focus on the main problem but try to make our underacting about
-the Union Closed families deeper. Specifically we proved that the core structure of such families completely preserved through isomorphism. 
 
-Here you can see definition of isomorphism and some example.
-
-One day we I was dealing we the problem I through "if I have a Union-closed family" and know it 
+One day we I was dealing we the problem I though "if I have a Union-closed family" and know it 
 has a member that belongs to at least half of the family as Frankl proposed what can we say about
 another Union-closed family that is isomorphic to that? Can we conclude it has a member with that property? Or even more rough question if a member belongs to for example 11 member of the family 
 is there a member that belongs to 10 member of the family of its isomorphic family? 
 
+
 When first you start write some example to experience the question you will find out very soon.
 It is not true. At least for the rougher question is not true. Here is some example that shows us 
 it can't be always true. 
+
+Here you can see definition of isomorphism and some example.
+
+That day 3 questions come up in my mind:
+1- If a union-closed family satisfies Frankl’s conjecture, does every isomorphic family also satisfy it?
+2- Does isomorphic families have members with same frequency count?
+3- Are all member of the families have a counterpart with same frequency count?
+
+When you trying to bring some example to check the validity of this question you will
+quitly find out the answer of third question is No. Even in simple cases.
+this is an counter example for the third question. as you see one elements appears in 
+four members of the family but there is no member with the same frequency count in its isomorphic counterpart.
+
+
+
 
 But with a closer look we can see our isomorphism preserve the structure completely. You can see 
 if we draw Hasse diagram of two Union-closed family the lattice structure completely preserve.
