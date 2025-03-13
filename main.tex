@@ -47,7 +47,7 @@
 	He stated that in every such family, there exists an element that appears in at least half of the sets.
 	Despite significant efforts, the problem has remained unsolved for more than four decades.
 	\vfill
-	\vfill
+	\pause
 	\begin{block}{Union-Closed Conjecture (Frankl, 1979)}
 		Let \(\mathcal{K} \subseteq 2^{[n]}\) be a union-closed family of sets.
 		Then there exists an element \(i \in \bigcup \mathcal{K}\) such that: \(|\mathcal{K}| \leq 2|\mathcal{K}^i|\),
@@ -60,31 +60,34 @@
 \end{frame}
 
 
-\begin{frame}{Examples}
-	\textbf{Example 1:} Consider the family of sets:
+
+\begin{frame}{Examples of Union-Closed Families}
+	\textbf{Example 1: Small Family}
 	\[
 		\mathcal{K} = \{\varnothing, \{1\}, \{1,2\}, \{2,3,4\}, \{1,2,3,4\}\}
 	\]
-	Elements 1 and 2 satisfy the conjecture.
+	Here, elements 1 and 2 satisfy the conjecture.
 
 	\vfill
+	\pause
 
-	\textbf{Example 2:} Consider the family of sets:
+	\textbf{Example 2: Another Small Family}
 	\[
 		\mathcal{K} = \{\varnothing, \{a\}, \{b\}, \{a,b\}\}
 	\]
-	Elements a and b satisfy the conjecture.
+	In this case, both \( a \) and \( b \) satisfy the conjecture.
 \end{frame}
 
-\begin{frame}
+
+\begin{frame}{Isomorphism}
 	\begin{itemize}
 		\item 	If a union-closed family satisfies Frankl’s conjecture, does every isomorphic family also satisfy it?
 		\item  In an isomorphic union-closed family, does each element appear in the same number of sets?
 
-
 	\end{itemize}
 
 	\vfill
+	\pause
 	\begin{Definition}
 		Let \( \mathcal{K}_1 \) and \( \mathcal{K}_2 \) be union-closed families of sets.
 		A bijective mapping \( h: \mathcal{K}_1 \to \mathcal{K}_2 \) is called a \textbf{Isomorphism} if, for all
@@ -367,7 +370,13 @@
 		\]
 	\end{theorem}
 
+\end{frame}
 
+\begin{frame}
+	\frametitle{References}
+	\nocite{*} % Include all references
+	\bibliographystyle{plainurl}
+	\bibliography{references}
 \end{frame}
 
 \begin{frame}{Thank You!}
@@ -379,12 +388,7 @@
 \end{frame}
 
 
-\begin{frame}
-	\frametitle{References}
-	\nocite{*} % Include all references
-	\bibliographystyle{plainurl}
-	\bibliography{references}
-\end{frame}
+
 
 
 \end{document}
