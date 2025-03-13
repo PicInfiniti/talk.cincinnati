@@ -5,12 +5,16 @@ P.~Frankl.
 \newblock Extremal set systems.
 \newblock In {\em Handbook of Combinatorics}, volume~2, pages 1293--1329. 1995.
 
-\bibitem{moghaddasmehr2023}
+\bibitem{mehr2023noteunionclosedsetsconjecture}
 M.~J.~Moghaddas Mehr.
-\newblock A note on the union-closed sets conjecture.
-\newblock arXiv, 2023.
-\newblock \href {http://arxiv.org/abs/2309.01704} {\path{arXiv:2309.01704}},
-  \href {https://doi.org/10.48550/arXiv.2309.01704}
-  {\path{doi:10.48550/arXiv.2309.01704}}.
+\newblock A note on the union-closed sets conjecture, 2023.
+\newblock URL: \url{https://arxiv.org/abs/2309.01704}, \href
+  {http://arxiv.org/abs/2309.01704} {\path{arXiv:2309.01704}}.
+
+\bibitem{mehr2025isomorphismunionclosedsets}
+M.~J.~Moghaddas Mehr.
+\newblock Isomorphism in union-closed sets, 2025.
+\newblock URL: \url{https://arxiv.org/abs/2501.02637}, \href
+  {http://arxiv.org/abs/2501.02637} {\path{arXiv:2501.02637}}.
 
 \end{thebibliography}
