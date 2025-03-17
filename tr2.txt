@@ -1,0 +1,88 @@
+First slide:
+Hi every one, I'm really glad to have this chance to share my recent work with you.
+
+second slide:
+to start let me give you a brief History about the problem wich ispire this work.
+In 1979 Frankl proposed a very interesting conjecture. He stated that for every Union-closed family
+there exist a member which appears in at least half of the family. 
+It seems very obvius at the first glance but the problem remains open after more than four decades.
+
+here you can see formal statement of the conjecture.
+
+K^i is all member of family which has i as a member.
+
+3th slide:
+here you can see two small examples.
+you can easily verify the conjecture for these examples.
+
+4th slide:
+One day, while I was thinking about the conjecture two interesting question came up to my mind.
+
+
+1- I aske myself if we have a UC family and know that it is satisfy Franlk's conjecture, what we can
+say about its isomorphioc counterpart?
+2- or even asking more general queation, consider we have two UC family. Do all their members have a member in its isomorphic family with the same frequency count?  
+
+and here you can they formal definition of isomorphism betwen two UC family. 
+a bijective function that preserve union.
+
+5th slide
+about the first question we don't know the answer yet but if UC conjecture prove to be true the automatically it turn to yes.
+
+and when you try to exmain second question you will quckly figure out, it is not true even for
+simple case.
+
+as you see in this exaample there is a member which apears 4 time in K_1 but we don't have any member
+with same frecueny in K_2.
+
+6th slide:
+but if we take take a closer look on this exmple we see it is correct for some members!
+
+7th slide:
+additionally if we examin their lattice structure, we will see it complay the same, and our isomorphice map is an isomorphy between their lattice.
+
+and when we remove other member than the ones whith same frecuency we will figure out they are look
+exactly them same just relabeling members.
+
+putting these part togethr gives use this insight to search second quesion more closely.
+
+to contiue working on the quesrtion first we need a defintion which help us ditingush between
+core element and those whos redundant.
+
+8th slide:
+we can formalize this insight with these simpel but powerful defintion of redundant elemnnt.
+we call an element redundant if removing it from each member of family dosn't effect the cardinaluity of the family.
+this simple defintion keep the whole structure intact.
+
+now we can remove all redundant elemnt to rech a pure family whithout anyredundant element.
+here is formal defintion of pure union closed family.
+
+this defintion is very interesting because without any efect on the structure gives use a clean family.
+and also it is easy to veryfy that Frankul's conjecture is true if and only if it is true for pure union closed family. so every time we are working with union close family we can consider it as pure family.
+
+9th slide:
+now we ask our 2 pervoius quesiton, this time for pure uion close family the answare of both is yes.
+actully id the answer of second one be yes the first one is yes as its corrolary. so we need to verify second one in general case
+
+10th slide:
+to verify second queesion we get help a very useful theorem which is proived as a part of this work.
+it state that the cardinality of all members will preserved over isomorphism.
+
+when I was starting to work on this paper I didn't expect such strong theorem.
+I was triyng to prove that the number of all non-redundant element is the same in both family. now we have that as colloraly of the theorem.
+
+11th slide: with cardinality theorem we can conclude all of main operation preserve, Union, intersection, set mineus and complement.
+
+12th side:
+and this strong corrolary helps use to prove the main theorem of this work. 
+which state that isomorshism in uinion closed family is actully induced by a map we call that hyperisomorphism between family universe.
+
+and this theorem would answer our quesions.
+
+13th side:
+the refrences
+
+14th slide:
+thank you for your consideration.
+if you have any question, idea or comment I'll happy to here now or you can contace my later.
+
