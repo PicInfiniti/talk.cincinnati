@@ -1,88 +1,105 @@
-First slide:
-Hi every one, I'm really glad to have this chance to share my recent work with you.
+Talk Transcript:
 
-second slide:
-to start let me give you a brief History about the problem wich ispire this work.
-In 1979 Frankl proposed a very interesting conjecture. He stated that for every Union-closed family
-there exist a member which appears in at least half of the family. 
-It seems very obvius at the first glance but the problem remains open after more than four decades.
+First Slide:
+Hi everyone, I'm really glad to have this opportunity to share my recent work with you.
 
-here you can see formal statement of the conjecture.
+Second Slide:
+To start, let me give you a brief history of the problem that inspired this work.
 
-K^i is all member of family which has i as a member.
+In 1979, Frankl proposed a very interesting conjecture. He stated that for every union-closed family, there exists a member that appears in at least half of the family.
 
-3th slide:
-here you can see two small examples.
-you can easily verify the conjecture for these examples.
+At first glance, this seems obvious, yet the problem remains unsolved after more than four decades.
 
-4th slide:
-One day, while I was thinking about the conjecture two interesting question came up to my mind.
+Here, you can see the formal statement of the conjecture:
+
+K^i represents all members of the family that contain i as an element.
+
+Third Slide:
+Here, you can see two small examples.
+You can easily verify the conjecture for these cases.
+
+Fourth Slide:
+One day, while I was thinking about the conjecture, two interesting questions came to my mind:
+
+I asked myself: if we have a union-closed (UC) family and know that it satisfies Frankl's conjecture, what can we say about its isomorphic counterpart?
+More generally, suppose we have two UC families. Does every member in one family have a corresponding member in its isomorphic counterpart with the same frequency count?
+Here, you can see the formal definition of isomorphism between two UC families:
+An isomorphism is a bijective function that preserves unions.
+
+Fifth Slide:
+Regarding the first question, we don’t know the answer yet. However, if Frankl's conjecture is proven true, then it automatically follows that the answer is "yes."
+
+or 
+Regarding the first question, we don’t have a definitive answer yet. However, if the Union-Closed Set Conjecture is confirmed to be true, then the answer would automatically be yes (or positive), because the conjecture states that every union-closed family must have this property.
 
 
-1- I aske myself if we have a UC family and know that it is satisfy Franlk's conjecture, what we can
-say about its isomorphioc counterpart?
-2- or even asking more general queation, consider we have two UC family. Do all their members have a member in its isomorphic family with the same frequency count?  
+For the second question, upon examination, we quickly realize that it is not true—even in simple cases.
 
-and here you can they formal definition of isomorphism betwen two UC family. 
-a bijective function that preserve union.
+As you can see in this example, there is a member that appears four times in K_1, but we do not have any member with the same frequency in K_2.
 
-5th slide
-about the first question we don't know the answer yet but if UC conjecture prove to be true the automatically it turn to yes.
+Sixth Slide:
+However, if we take a closer look at this example, we see that the statement is true for some members!
 
-and when you try to exmain second question you will quckly figure out, it is not true even for
-simple case.
+Seventh Slide:
+Additionally, if we examine their lattice structures, we see that they comply in the same way, and our isomorphic mapping is actually an isomorphism between their lattices.
 
-as you see in this exaample there is a member which apears 4 time in K_1 but we don't have any member
-with same frecueny in K_2.
+Furthermore, when we remove all members except those with the same frequency, we find that they look exactly the same—just with relabeled members.
 
-6th slide:
-but if we take take a closer look on this exmple we see it is correct for some members!
+By putting these observations together, we gain an important insight that motivates us to investigate the second question more closely.
 
-7th slide:
-additionally if we examin their lattice structure, we will see it complay the same, and our isomorphice map is an isomorphy between their lattice.
+To continue working on the question, we first need a definition that helps us distinguish between core elements and those that are redundant.
 
-and when we remove other member than the ones whith same frecuency we will figure out they are look
-exactly them same just relabeling members.
+Eighth Slide:
+We can formalize this insight with a simple yet powerful definition of redundant elements:
 
-putting these part togethr gives use this insight to search second quesion more closely.
+We call an element redundant if removing it from each member of the family does not affect the cardinality of the family.
 
-to contiue working on the quesrtion first we need a defintion which help us ditingush between
-core element and those whos redundant.
+This simple definition keeps the overall structure intact.
 
-8th slide:
-we can formalize this insight with these simpel but powerful defintion of redundant elemnnt.
-we call an element redundant if removing it from each member of family dosn't effect the cardinaluity of the family.
-this simple defintion keep the whole structure intact.
+Now, we can remove all redundant elements to reach a pure UC family—one without any redundant elements.
 
-now we can remove all redundant elemnt to rech a pure family whithout anyredundant element.
-here is formal defintion of pure union closed family.
+Here is the formal definition of a pure union-closed family.
 
-this defintion is very interesting because without any efect on the structure gives use a clean family.
-and also it is easy to veryfy that Frankul's conjecture is true if and only if it is true for pure union closed family. so every time we are working with union close family we can consider it as pure family.
+This definition is very interesting because, while keeping the overall structure unchanged, it allows us to work with a cleaner family.
 
-9th slide:
-now we ask our 2 pervoius quesiton, this time for pure uion close family the answare of both is yes.
-actully id the answer of second one be yes the first one is yes as its corrolary. so we need to verify second one in general case
+Moreover, it is easy to verify that Frankl’s conjecture holds if and only if it holds for pure union-closed families. This means that whenever we study a union-closed family, we can assume it is pure.
 
-10th slide:
-to verify second queesion we get help a very useful theorem which is proived as a part of this work.
-it state that the cardinality of all members will preserved over isomorphism.
+Ninth Slide:
+Now, let's revisit our two previous questions.
 
-when I was starting to work on this paper I didn't expect such strong theorem.
-I was triyng to prove that the number of all non-redundant element is the same in both family. now we have that as colloraly of the theorem.
+When restricted to pure union-closed families, the answer to both questions is yes.
 
-11th slide: with cardinality theorem we can conclude all of main operation preserve, Union, intersection, set mineus and complement.
+In fact, if the answer to the second question is "yes," then the answer to the first follows as a corollary.
 
-12th side:
-and this strong corrolary helps use to prove the main theorem of this work. 
-which state that isomorshism in uinion closed family is actully induced by a map we call that hyperisomorphism between family universe.
+Thus, our main task is to verify the second question in the general case.
 
-and this theorem would answer our quesions.
+Tenth Slide:
+To verify the second question, we use a very useful theorem, which was proved as part of this work.
 
-13th side:
-the refrences
+It states that the cardinality of all members is preserved under isomorphism.
 
-14th slide:
-thank you for your consideration.
-if you have any question, idea or comment I'll happy to here now or you can contace my later.
+When I began working on this problem, I did not expect such a strong result.
 
+Initially, I was only trying to prove that the number of non-redundant elements remains the same in both families. Now, we have that as a corollary of this theorem.
+
+Eleventh Slide:
+With the cardinality theorem, we can conclude that all main operations are preserved under isomorphism, including:
+
+Union
+Intersection
+Set difference
+Complement
+Twelfth Slide:
+This strong corollary helps us prove the main theorem of this work.
+
+It states that isomorphism in union-closed families is actually induced by a specific map, which we call hyperisomorphism between family universes.
+
+This theorem answers our original questions.
+
+Thirteenth Slide:
+References
+
+Fourteenth Slide:
+Thank you for your time and consideration!
+
+If you have any questions, ideas, or comments, I’d be happy to discuss them now, or you can contact me later.
