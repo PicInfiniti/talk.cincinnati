@@ -3,6 +3,9 @@
 \usepackage{graphicx, fancyhdr}
 \usepackage{mdframed} % Add this to the preamble
 \usepackage{xcolor} % Ensure xcolor is included
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
 \definecolor{Teal}{HTML}{23373B} % Define the color
 \definecolor{darkGreen}{rgb}{0.0, 0.5, 0.0}  % Define dark green color
 \definecolor{darkBlue}{rgb}{0.0, 0.0, 0.8}  % Define dark green color
@@ -16,6 +19,7 @@
 \setbeamercolor{block body}{fg=black, bg=Teal!8}  % Block body color
 
 \newtheorem{conjecture}{Conjecture}
+\renewcommand{\thealgorithm}{}
 % Footer settings
 \setbeamertemplate{footline}{
   \leavevmode\hbox{\begin{beamercolorbox}[wd=\paperwidth,ht=3ex,dp=2ex]{author in head/foot}%
@@ -82,10 +86,7 @@
 
 \begin{frame}{Isomorphism}
 	\begin{itemize}
-		\item 	If a union-closed family satisfies Frankl’s conjecture, does every isomorphic family also satisfy it?
-		      \pause
-		\item  In an isomorphic union-closed family, does each element appear in the same number of sets?
-
+		\item[\textcolor{orange}{\textbf{?}}]Suppose we have two isomorphic union-closed families. Do the elements have the same frequency counts in both families?
 	\end{itemize}
 
 	\vfill
@@ -102,8 +103,6 @@
 
 \begin{frame}
 	\begin{itemize}
-		\item[\textcolor{orange}{\textbf{?}}]	If a union-closed family satisfies Frankl’s conjecture, does every isomorphic family also satisfy it?
-			\pause
 		\item[\textcolor{red}{\textbf{X}}] In an isomorphic union-closed family, does each element appear in the same number of sets?
 	\end{itemize}
 	\pause
@@ -150,7 +149,6 @@
 \begin{frame}
 
 	\begin{itemize}
-		\item[\textcolor{orange}{\textbf{?}}]	If a union-closed family satisfies Frankl’s conjecture, does every isomorphic family also satisfy it?
 		\item[\textcolor{red}{\textbf{X}}] In an isomorphic union-closed family, does each element appear in the same number of sets?
 	\end{itemize}
 
@@ -196,72 +194,160 @@
 	\end{center}
 \end{frame}
 
+
 \begin{frame}
-	\begin{center}
-
-		\begin{tikzpicture}
-			[scale=.8, transform shape, every node/.style={draw, rectangle, minimum width=1cm, minimum height=0.5cm, inner sep=3pt}]
+	\centering
+	\begin{minipage}{0.4\textwidth}
+		\centering
+		\begin{tikzpicture}[scale=0.6, transform shape]
+			\draw[thin] (3.2,2) arc[start angle=90, end angle=270, x radius=1, y radius=2]; % X on the right
+			\draw[thin] (-1.2,-2) arc[start angle=-90, end angle=90, x radius=1, y radius=2]; % Y on the left
 			% Labels for sets
-			\node[draw=none] at (3.5,6) {\textbf{h}};
-			% Nodes
-			\node (5) at (0, 3) {5};
-			\node (1235) at (-1.5, 4.5) {1,2,3,5};
-			\node (345) at (1.5, 4.5) {3,4,5};
-			\node (12345) at (0, 6) {1,2,3,4,5};
+			\node at (-1.5,2.7) {\(\pmb{\mathcal{K}_1}\)};
+			\node at (3.5,2.7) {\(\pmb{\mathcal{K}_2}\)};
 
-			% Edges
-			\draw[->, shorten >=5pt, shorten <=5pt] (5) -- (345);
-			\draw[->, shorten >=5pt, shorten <=5pt] (5) -- (1235);
-			\draw[->, shorten >=5pt, shorten <=5pt] (1235) -- (12345);
-			\draw[->, shorten >=5pt, shorten <=5pt] (345) -- (12345);
+			% Elements in X (now enclosed in sets)
+			\node[left] at (-1,1.5) {\textcolor{gray}{\{\textcolor{red}1,2,3,4,5\}}};
+			\node[left] at (-1,0.5) {\textcolor{gray}{\{\textcolor{red}1,2,3,5\}}};
+			\node[left] at (-1,-0.5) {\textcolor{gray}{\{3,4,5\}}};
+			\node[left] at (-1,-1.5) {\textcolor{gray}{\{5\}}};
 
-			\draw[->, thick] (2,5) to[out=45, in=135] (5.5,5);
+			% Elements in Y (now enclosed in sets)
+			\node[right] at (3,1.5) {\textcolor{gray}{\{a,b\}}};
+			\node[right] at (3,0.5) {\textcolor{gray}{\{a\}}};
+			\node[right] at (3,-0.5) {\textcolor{gray}{\{b\}}};
+			\node[right] at (3,-1.5) {\textcolor{gray}{\(\varnothing\)}};
 
-			% Nodes
-			\node (empty) at (7.5, 3) {\(\varnothing\)};
-			\node (b) at (6, 4.5) {b};
-			\node (a) at (9, 4.5) {a};
-			\node (ab) at (7.5, 6) {a,b};
+			% Draw mappings
+			\draw[->, thin] (-.9,1.5) -- (2.9,1.5);
+			\draw[->, thin] (-.9,0.5) -- (2.9,0.5);
+			\draw[->, thin] (-.9,-0.5) -- (2.9,-0.5);
+			\draw[->, thin] (-.9,-1.5) -- (2.9,-1.5);
 
-			% Edges
-			\draw[->, shorten >=2pt, shorten <=2pt](empty) -- (a);
-			\draw[->, shorten >=5pt, shorten <=5pt] (empty) -- (b);
-			\draw[->, shorten >=5pt, shorten <=5pt] (a) -- (ab);
-			\draw[->, shorten >=5pt, shorten <=5pt] (b) -- (ab);
+			% Draw points in X
+			\foreach \y in {1.5,0.5,-0.5,-1.5}
+			\fill (-1,\y) circle (1pt);
+
+			% Draw points in Y
+			\foreach \y in {1.5,0.5,-0.5,-1.5}
+			\fill (3,\y) circle (1pt);
 		\end{tikzpicture}
-		\pause
-		\vfill
-		\begin{tikzpicture}
-			[scale=.8, transform shape, every node/.style={draw, rectangle, minimum width=1cm, minimum height=0.5cm, inner sep=3pt}]
+	\end{minipage}
+	\hspace{.5cm}
+	% Second diagram
+	\begin{minipage}{0.4\textwidth}
+		\centering
+		\begin{tikzpicture}[scale=0.6, transform shape]
+			\draw[thin] (3.2,2) arc[start angle=90, end angle=270, x radius=1, y radius=2]; % X on the right
+			\draw[thin] (-1.2,-2) arc[start angle=-90, end angle=90, x radius=1, y radius=2]; % Y on the left
 			% Labels for sets
-			\node[draw=none] at (3.5,6) {\textbf{h}};
-			% Nodes
-			\node (5) at (0, 3) {\(\varnothing\)};
-			\node (1235) at (-1.5, 4.5) {1};
-			\node (345) at (1.5, 4.5) {4};
-			\node (12345) at (0, 6) {1,4};
+			\node at (-1.5,2.7) {\(\pmb{\mathcal{K}_1}\)};
+			\node at (3.5,2.7) {\(\pmb{\mathcal{K}_2}\)};
 
-			% Edges
-			\draw[->, shorten >=5pt, shorten <=5pt] (5) -- (345);
-			\draw[->, shorten >=5pt, shorten <=5pt] (5) -- (1235);
-			\draw[->, shorten >=5pt, shorten <=5pt] (1235) -- (12345);
-			\draw[->, shorten >=5pt, shorten <=5pt] (345) -- (12345);
+			% Elements in X (now enclosed in sets)
+			\node[left] at (-1,1.5) {\textcolor{gray}{\{1,\textcolor{red}2,3,4,5\}}};
+			\node[left] at (-1,0.5) {\textcolor{gray}{\{1,\textcolor{red}2,3,5\}}};
+			\node[left] at (-1,-0.5) {\textcolor{gray}{\{3,4,5\}}};
+			\node[left] at (-1,-1.5) {\textcolor{gray}{\{5\}}};
 
-			\draw[->, thick] (2,5) to[out=45, in=135] (5.5,5);
+			% Elements in Y (now enclosed in sets)
+			\node[right] at (3,1.5) {\textcolor{gray}{\{a,b\}}};
+			\node[right] at (3,0.5) {\textcolor{gray}{\{a\}}};
+			\node[right] at (3,-0.5) {\textcolor{gray}{\{b\}}};
+			\node[right] at (3,-1.5) {\textcolor{gray}{\(\varnothing\)}};
 
-			% Nodes
-			\node (empty) at (7.5, 3) {\(\varnothing\)};
-			\node (b) at (6, 4.5) {b};
-			\node (a) at (9, 4.5) {a};
-			\node (ab) at (7.5, 6) {a,b};
+			% Draw mappings
+			\draw[->, thin] (-.9,1.5) -- (2.9,1.5);
+			\draw[->, thin] (-.9,0.5) -- (2.9,0.5);
+			\draw[->, thin] (-.9,-0.5) -- (2.9,-0.5);
+			\draw[->, thin] (-.9,-1.5) -- (2.9,-1.5);
 
-			% Edges
-			\draw[->, shorten >=2pt, shorten <=2pt](empty) -- (a);
-			\draw[->, shorten >=5pt, shorten <=5pt] (empty) -- (b);
-			\draw[->, shorten >=5pt, shorten <=5pt] (a) -- (ab);
-			\draw[->, shorten >=5pt, shorten <=5pt] (b) -- (ab);
+			% Draw points in X
+			\foreach \y in {1.5,0.5,-0.5,-1.5}
+			\fill (-1,\y) circle (1pt);
+
+			% Draw points in Y
+			\foreach \y in {1.5,0.5,-0.5,-1.5}
+			\fill (3,\y) circle (1pt);
 		\end{tikzpicture}
-	\end{center}
+	\end{minipage}
+	\vfill
+	\pause
+	\begin{minipage}{0.4\textwidth}
+		\centering
+		\begin{tikzpicture}[scale=0.6, transform shape]
+			\draw[thin] (3.2,2) arc[start angle=90, end angle=270, x radius=1, y radius=2]; % X on the right
+			\draw[thin] (-1.2,-2) arc[start angle=-90, end angle=90, x radius=1, y radius=2]; % Y on the left
+			% Labels for sets
+			\node at (-1.5,2.7) {\(\pmb{\mathcal{K}_1}\)};
+			\node at (3.5,2.7) {\(\pmb{\mathcal{K}_2}\)};
+
+			% Elements in X (now enclosed in sets)
+			\node[left] at (-1,1.5) {\textcolor{gray}{\{1,2,\textcolor{red}3,4,5\}}};
+			\node[left] at (-1,0.5) {\textcolor{gray}{\{1,2,\textcolor{red}3,5\}}};
+			\node[left] at (-1,-0.5) {\textcolor{gray}{\{\textcolor{red}3,4,5\}}};
+			\node[left] at (-1,-1.5) {\textcolor{gray}{\{5\}}};
+
+			% Elements in Y (now enclosed in sets)
+			\node[right] at (3,1.5) {\textcolor{gray}{\{a,b\}}};
+			\node[right] at (3,0.5) {\textcolor{gray}{\{a\}}};
+			\node[right] at (3,-0.5) {\textcolor{gray}{\{b\}}};
+			\node[right] at (3,-1.5) {\textcolor{gray}{\(\varnothing\)}};
+
+			% Draw mappings
+			\draw[->, thin] (-.9,1.5) -- (2.9,1.5);
+			\draw[->, thin] (-.9,0.5) -- (2.9,0.5);
+			\draw[->, thin] (-.9,-0.5) -- (2.9,-0.5);
+			\draw[->, thin] (-.9,-1.5) -- (2.9,-1.5);
+
+			% Draw points in X
+			\foreach \y in {1.5,0.5,-0.5,-1.5}
+			\fill (-1,\y) circle (1pt);
+
+			% Draw points in Y
+			\foreach \y in {1.5,0.5,-0.5,-1.5}
+			\fill (3,\y) circle (1pt);
+		\end{tikzpicture}
+	\end{minipage}
+	\hspace{.5cm}
+	% Second diagram
+	\begin{minipage}{0.4\textwidth}
+		\centering
+		\begin{tikzpicture}[scale=0.6, transform shape]
+			\draw[thin] (3.2,2) arc[start angle=90, end angle=270, x radius=1, y radius=2]; % X on the right
+			\draw[thin] (-1.2,-2) arc[start angle=-90, end angle=90, x radius=1, y radius=2]; % Y on the left
+			% Labels for sets
+			\node at (-1.5,2.7) {\(\pmb{\mathcal{K}_1}\)};
+			\node at (3.5,2.7) {\(\pmb{\mathcal{K}_2}\)};
+
+			% Elements in X (now enclosed in sets)
+			\node[left] at (-1,1.5) {\textcolor{gray}{\{1,2,3,4,\textcolor{red}5\}}};
+			\node[left] at (-1,0.5) {\textcolor{gray}{\{1,2,3,\textcolor{red}5\}}};
+			\node[left] at (-1,-0.5) {\textcolor{gray}{\{3,4,\textcolor{red}5\}}};
+			\node[left] at (-1,-1.5) {\textcolor{gray}{\{\textcolor{red}5\}}};
+
+			% Elements in Y (now enclosed in sets)
+			\node[right] at (3,1.5) {\textcolor{gray}{\{a,b\}}};
+			\node[right] at (3,0.5) {\textcolor{gray}{\{a\}}};
+			\node[right] at (3,-0.5) {\textcolor{gray}{\{b\}}};
+			\node[right] at (3,-1.5) {\textcolor{gray}{\(\varnothing\)}};
+
+			% Draw mappings
+			\draw[->, thin] (-.9,1.5) -- (2.9,1.5);
+			\draw[->, thin] (-.9,0.5) -- (2.9,0.5);
+			\draw[->, thin] (-.9,-0.5) -- (2.9,-0.5);
+			\draw[->, thin] (-.9,-1.5) -- (2.9,-1.5);
+
+			% Draw points in X
+			\foreach \y in {1.5,0.5,-0.5,-1.5}
+			\fill (-1,\y) circle (1pt);
+
+			% Draw points in Y
+			\foreach \y in {1.5,0.5,-0.5,-1.5}
+			\fill (3,\y) circle (1pt);
+		\end{tikzpicture}
+	\end{minipage}
+
 \end{frame}
 
 \begin{frame}
@@ -282,6 +368,159 @@
 
 
 \begin{frame}
+	\centering
+	\begin{minipage}{0.4\textwidth}
+		\centering
+		\begin{tikzpicture}[scale=.7, transform shape]
+			\draw[thin] (3.2,2) arc[start angle=90, end angle=270, x radius=1, y radius=2]; % X on the right
+			\draw[thin] (-1.2,-2) arc[start angle=-90, end angle=90, x radius=1, y radius=2]; % Y on the left
+			% Labels for sets
+			\node at (-1.5,2.7) {\(\pmb{\mathcal{K}_1}\)};
+			\node at (3.5,2.7) {\(\pmb{\mathcal{K}_2}\)};
+
+			% Elements in X (now enclosed in sets)
+			\node[left] at (-1,1.5) {\{4\}};
+			\node[left] at (-1,0.5) {\(\varnothing\)};
+
+			% Elements in Y (now enclosed in sets)
+			\node[right] at (3,1.5) {\{a,b\}};
+			\node[right] at (3,0.5) {\{a\}};
+			\node[right] at (3,-0.5) {\{b\}};
+			\node[right] at (3,-1.5) {\(\varnothing\)};
+
+
+			% Draw mappings
+			\draw[->, thin] (-.9,1.5) -- (2.9,1.5);
+			\draw[->, thin] (-.9,0.5) -- (2.9,0.5);
+
+			% Draw points in X
+			\foreach \y in {1.5,0.5}
+			\fill (-1,\y) circle (1pt);
+
+			% Draw points in Y
+			\foreach \y in {1.5,0.5,-0.5,-1.5}
+			\fill (3,\y) circle (1pt);
+		\end{tikzpicture}
+	\end{minipage}
+	\hspace{.5cm}
+	\vfill
+	\pause
+	\begin{minipage}{0.4\textwidth}
+		\centering
+		\begin{tikzpicture}[scale=0.6, transform shape]
+			\draw[thin] (3.2,2) arc[start angle=90, end angle=270, x radius=1, y radius=2]; % X on the right
+			\draw[thin] (-1.2,-2) arc[start angle=-90, end angle=90, x radius=1, y radius=2]; % Y on the left
+			% Labels for sets
+			\node at (-1.5,2.7) {\(\pmb{\mathcal{K}_1}\)};
+			\node at (3.5,2.7) {\(\pmb{\mathcal{K}_2}\)};
+
+			% Elements in X (now enclosed in sets)
+			\node[left] at (-1,1.5) {\textcolor{gray}{\{\textcolor{red}1,2,3,4,5\}}};
+			\node[left] at (-1,0.5) {\textcolor{gray}{\{\textcolor{red}1,2,3,5\}}};
+			\node[left] at (-1,-0.5) {\textcolor{gray}{\{3,4,5\}}};
+			\node[left] at (-1,-1.5) {\textcolor{gray}{\{5\}}};
+
+			% Elements in Y (now enclosed in sets)
+			\node[right] at (3,1.5) {\textcolor{gray}{\{a,b\}}};
+			\node[right] at (3,0.5) {\textcolor{gray}{\{a\}}};
+			\node[right] at (3,-0.5) {\textcolor{gray}{\{b\}}};
+			\node[right] at (3,-1.5) {\textcolor{gray}{\(\varnothing\)}};
+
+			% Draw mappings
+			\draw[->, thin] (-.9,1.5) -- (2.9,1.5);
+			\draw[->, thin] (-.9,0.5) -- (2.9,0.5);
+			\draw[->, thin] (-.9,-0.5) -- (2.9,-0.5);
+			\draw[->, thin] (-.9,-1.5) -- (2.9,-1.5);
+
+			% Draw points in X
+			\foreach \y in {1.5,0.5,-0.5,-1.5}
+			\fill (-1,\y) circle (1pt);
+
+			% Draw points in Y
+			\foreach \y in {1.5,0.5,-0.5,-1.5}
+			\fill (3,\y) circle (1pt);
+		\end{tikzpicture}
+	\end{minipage}
+	\hspace{.5cm}
+	% Second diagram
+	\begin{minipage}{0.4\textwidth}
+		\centering
+		\begin{tikzpicture}[scale=0.6, transform shape]
+			\draw[thin] (3.2,2) arc[start angle=90, end angle=270, x radius=1, y radius=2]; % X on the right
+			\draw[thin] (-1.2,-2) arc[start angle=-90, end angle=90, x radius=1, y radius=2]; % Y on the left
+			% Labels for sets
+			\node at (-1.5,2.7) {\(\pmb{\mathcal{K}_1}\)};
+			\node at (3.5,2.7) {\(\pmb{\mathcal{K}_2}\)};
+
+			% Elements in X (now enclosed in sets)
+			\node[left] at (-1,1.5) {\textcolor{gray}{\{1,\textcolor{red}2,3,4,5\}}};
+			\node[left] at (-1,0.5) {\textcolor{gray}{\{1,\textcolor{red}2,3,5\}}};
+			\node[left] at (-1,-0.5) {\textcolor{gray}{\{3,4,5\}}};
+			\node[left] at (-1,-1.5) {\textcolor{gray}{\{5\}}};
+
+			% Elements in Y (now enclosed in sets)
+			\node[right] at (3,1.5) {\textcolor{gray}{\{a,b\}}};
+			\node[right] at (3,0.5) {\textcolor{gray}{\{a\}}};
+			\node[right] at (3,-0.5) {\textcolor{gray}{\{b\}}};
+			\node[right] at (3,-1.5) {\textcolor{gray}{\(\varnothing\)}};
+
+			% Draw mappings
+			\draw[->, thin] (-.9,1.5) -- (2.9,1.5);
+			\draw[->, thin] (-.9,0.5) -- (2.9,0.5);
+			\draw[->, thin] (-.9,-0.5) -- (2.9,-0.5);
+			\draw[->, thin] (-.9,-1.5) -- (2.9,-1.5);
+
+			% Draw points in X
+			\foreach \y in {1.5,0.5,-0.5,-1.5}
+			\fill (-1,\y) circle (1pt);
+
+			% Draw points in Y
+			\foreach \y in {1.5,0.5,-0.5,-1.5}
+			\fill (3,\y) circle (1pt);
+		\end{tikzpicture}
+	\end{minipage}
+\end{frame}
+
+
+\begin{frame}{Redundancy Removal Algorithm}
+	\begin{algorithm}[H]
+		\caption[o]{Redundancy Removal}
+		\begin{algorithmic}[1]
+			\While{redundant elements exist}
+			\State Identify all redundant elements
+			\State Remove one redundant element
+			\EndWhile
+		\end{algorithmic}
+	\end{algorithm}
+	\vfill
+	\pause
+
+	\begin{block}{Purified Collection}
+		The \textbf{Purified Collection} of \( \mathcal{K} \), denoted by \( \mathcal{K}^* \), is constructed by iteratively removing all redundant elements from \( \mathcal{K} \).
+	\end{block}
+
+\end{frame}
+
+
+\begin{frame}{Notes on \texorpdfstring{$K^*$}{K*}}
+	\begin{itemize}
+		\item $K^*$ is not well-defined — there are many ways to purify a family!
+		      \begin{itemize}
+			      \item Fortunately, all versions of $K^*$ are \textbf{isomorphic}.
+			      \item So $K^*$ is unique \textit{up to isomorphism}.
+		      \end{itemize}
+		      \vspace{0.5em}
+		\item The main issue: we don’t know how many steps are needed to reach $K^*$.
+		      \begin{itemize}
+			      \item Different orders of removing redundant elements may lead to faster purification.
+			      \item We might end up with families of different sizes — even though they are isomorphic.
+		      \end{itemize}
+		      \vspace{0.5em}
+		\item That’s not very satisfying to me.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
 
 	\begin{itemize}
 		\item[\textcolor{darkGreen}{\textbf{\checkmark}}]	If a \textbf{pure union-closed family} satisfies Frankl’s conjecture, does every isomorphic family also satisfy it?
@@ -298,7 +537,6 @@
 			\node at (3.5,2.7) {\(\pmb{\mathcal{K}_2}\)};
 
 			% Elements in X (now enclosed in sets)
-
 			\node[left] at (-1,1.5) {\textcolor{gray}{\{\textcolor{darkBlue}{1}, \textcolor{darkGreen}{4}\}}};
 			\node[left] at (-1,0.5) {\textcolor{gray}{\{\textcolor{darkBlue}{1}\}}};
 			\node[left] at (-1,-0.5) {\textcolor{gray}{\{\textcolor{darkGreen}{4}\}}};

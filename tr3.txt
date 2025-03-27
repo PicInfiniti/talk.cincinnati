@@ -1,0 +1,73 @@
+Slide One:
+Hello every one. I am pleased to have the opportunity sharing my recent work with you here.
+
+Today we are going to talk about Isomorphism in Union-closed Sets.
+In this work we try to deepen our understanding about Union-closed
+families.
+
+Slide Two:
+Let me first give you a brief history about the problem that inspire
+this research.
+
+In 1979 FranKl proposed a very interesting conjecture. He stated that in every Union-closed family there exist an element which appears in at least half of the family. It seems very obvious at the first glance but it remains unsolved more than 4 decades.
+
+Here you can see formal statement of the conjecture.
+
+Slide Three:
+
+Here we have 2 simple example that satisfying the FranKl conjecture.
+But it hasn't been proven for general case yet.
+
+Slide Four:
+One day while I was thinking the conjecture an interesting problem
+came to my mind.
+
+- If we have two Isomorphic Union-closed families. Do all their elements have a corresponding element in their Isomorphic counterpart with the same frequency count? 
+
+By Isomorphism we mean a bijective map that preserve union between two Union-closed families.
+
+Slide Five:
+When you start tackling the question we will quickly figure out it is not correct even for simple cases. 
+
+As you can see in this example we have a member that appears four time in K_1 but there is not
+any corresponding element in K_2 with same appearance count.
+
+Slide Six:
+
+But if we take a closer look we will see there is some member with this feature.
+Here all these elements have same frequency count. After this insight we might want 
+to find a way to distinguish between this two type of elements.
+
+Slide Seven:
+So we look more closely and try to find a common feature between elements of each groups.
+For example we will find elements that removing them doesn't effect the structure and cardinality or Isomorphism. 
+
+Slide Eight:
+This observation suggest us this definition. 
+We call an element redundant if removing it from all member of the family doesn't effect the cardinality of the family. And after remove an element we call new family reduced collection.
+
+The concept of Redundancy leads us to pure collections.
+We call a family pure if it has no redundant element.
+
+Slide Nine:
+It is not as good as it looks. Because the next step naturally would be purify or remove all redundant element of a family. The time you try to remove all of redundant elements you will see 
+the whole structure collapsed!
+
+The reason is some of redundancy is relevant. I said relevant Because for example here we can't 
+remove both 1 and 2. The family needs at least of them to survive.
+
+Slide Ten:
+There is a way to fix this. We should remove them iteratively. 
+Next step is remove them! And get a pure family.
+
+I didn't call it a definition because we have two problem here:
+
+Slide Eleven:
+1- K^* is not well defined at all. There a lot of different way to purify a family!
+Fortunately we can prove all different version of K^* are Isomorphic. So it is unique up to Isomorphism at least.
+
+The main problem is we don't how many step might needed to reach K^*! Maybe if we change the order of removing redundant elements we purify the family faster. So we ends up with families with different number of non-redundant elements. It is not very pleasant to me. 
+
+
+
+
