@@ -83,3 +83,14 @@ Now we can ask our main question again, but this time about pure families.
 We don't have enough tools to answer this question, at the end it will be concluded from our
 main theorem.
 
+Slide Fifteen:
+To continue, I’d like to take a closer look at this corollary. We know both of our families are 
+Union-closed. So |UK_1| and |UK_2| must be block the their families. So the cardinality of
+one of the members is preserve over isomorphism. So what about other members? 
+Many Different Scenario happen when you start answering this question. Fortunately all of the cases has been resolved. So it is also true for all the members of the families.
+
+Slide Sixteen:
+This Theorem helps us to prove a very useful tools. We can conclude that all elementary set 
+operation all allowed. We can do union, intersection, set minus and complement. This is very handy corollary because we need to do a lot of calculation in last chapter.
+
+
