@@ -93,4 +93,16 @@ Slide Sixteen:
 This Theorem helps us to prove a very useful tools. We can conclude that all elementary set 
 operation all allowed. We can do union, intersection, set minus and complement. This is very handy corollary because we need to do a lot of calculation in last chapter.
 
+Slide Seventeen:
+We are ready to introduce definition of hyperisomorphism. The main goal of this section is 
+proving that there exist an hyperisomorphism for any given isomorphism. We need to do a lot of calculation to prove this and it is get possible by the previous corollary. But let give the main lemma we have used to prove that. It says for each elements in K_1 we have corresponding element in K_2 that satisfying this property. It helps to define the related hyperisomorphism.
 
+Slide Eighteen:
+And here is the main result which says every isomorphism introduced by a map. And this will be 
+answer our main question about frequency count.
+
+Slide Nineteen:
+Here is the related references. We also prove a weaker version of the conjecture in another paper.
+
+Slide Twenty:
+That's it. That for your time. And if you have any question, comment or idea you can ask me know or contact me later.
