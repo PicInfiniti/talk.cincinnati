@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Talk Cheat Sheet - Isomorphism in Union-Closed Sets</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 2rem auto;
+      max-width: 800px;
+      line-height: 1.6;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      margin-top: 1.5em;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.2em;
+    }
+
+    blockquote {
+      background: #eef;
+      border-left: 4px solid #55f;
+      margin: 1em 0;
+      padding: 0.5em 1em;
+      font-style: italic;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 0.1em 0.4em;
+      border-radius: 4px;
+    }
+
+    .footer {
+      margin-top: 2em;
+      font-size: 0.95em;
+      text-align: center;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Talk Cheat Sheet</h1>
+  <h2>Isomorphism in Union-Closed Sets</h2>
+  <p><strong>Presenter:</strong> Mohammad Javad Moghaddas Mehr<br>
+    <strong>Event:</strong> Cincinnati – March 2025</p>
+
+  <h2>🔹 Opening</h2>
+  <p>Hello everyone! Thanks for being here.<br>
+    Today, I’ll talk about <strong>Isomorphism in Union-Closed Sets</strong>, which explores the structure of union-closed families via isomorphisms.</p>
+
+  <h2>🔹 Background: Frankl’s Conjecture</h2>
+  <blockquote>
+    In any finite union-closed family, some element appears in at least half of the sets. (Frankl, 1979)
+  </blockquote>
+  <p>It feels intuitive, but remains unproven for over 40 years. We’ll build from this idea.</p>
+
+  <h2>🔹 Main Question</h2>
+  <blockquote>
+    If two union-closed families are isomorphic, do corresponding elements have the same frequency?
+  </blockquote>
+  <p><strong>Isomorphism</strong>: A bijection that preserves union operation between two families.</p>
+
+  <h2>🔹 Counterexample & Insight</h2>
+  <p>Not all elements preserve frequency under isomorphism. But some do.<br>
+    This led to identifying <strong>redundant elements</strong>: elements that don’t affect family size or structure when removed.</p>
+
+  <h2>🔹 Key Definitions</h2>
+  <ul>
+    <li><strong>Redundant Element:</strong> Removing it doesn't change family size.</li>
+    <li><strong>Reduced Collection:</strong> A family after removing a redundant element.</li>
+    <li><strong>Pure Family:</strong> A family with no redundant elements.</li>
+  </ul>
+
+  <h2>🔹 Purification Process</h2>
+  <p>Redundant elements are removed iteratively to get a <code>𝒦*</code>, the purified version.<br>
+     Different purification orders may result in different forms, but they’re <strong>isomorphic</strong>.</p>
+
+  <h2>🔹 Revisiting Our Question (for Pure Families)</h2>
+  <p>With purification, we can now ask:</p>
+  <blockquote>
+    In pure union-closed families, is frequency preserved under isomorphism?
+  </blockquote>
+
+  <h2>🔹 Main Results</h2>
+  <ul>
+    <li><strong>Theorem:</strong> Isomorphic pure families preserve element frequencies.</li>
+    <li><strong>Corollary:</strong> Set operations (union, intersection, etc.) preserve cardinality under isomorphism.</li>
+    <li><strong>Hyperisomorphism:</strong> A bijection at the element level that induces a family-level isomorphism.</li>
+    <li><strong>Theorem:</strong> Every isomorphism corresponds to a hyperisomorphism.</li>
+  </ul>
+
+  <h2>🔹 Conclusion</h2>
+  <ul>
+    <li>Any union-closed family can be purified without losing structure.</li>
+    <li>The frequency behavior is now well-understood in the pure case.</li>
+    <li>We also proved a weaker form of Frankl’s conjecture in related work.</li>
+  </ul>
+
+  <h2>🙏 Closing</h2>
+  <p>Thanks for your time!<br>
+    Questions, comments, or feedback are welcome.<br>
+    📧 <strong>m.moghadas11235@gmail.com</strong><br>
+    📄 <a href="https://arxiv.org/abs/2501.02637v2" target="_blank">arxiv.org/abs/2501.02637v2</a></p>
+
+  <div class="footer">
+    © 2025 Mohammad Javad Moghaddas Mehr
+  </div>
+
+</body>
+</html>
+
